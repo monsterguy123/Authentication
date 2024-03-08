@@ -91,7 +91,7 @@ userRoute.post('/forgetPassword', async (req, res) => {
         const header = req.headers['authorization'];
         const token = header.split(' ')[1];
 
-        res.status(200).json({link:`http://localhost:3000/api/v1/user/resetPassword/${token}`});
+        res.status(200).json({link:`https://authentication-30bj.onrender.com/api/v1/user/resetPassword/${token}`});
 
     } catch (error) {
         res.json({ msg: error.message });
@@ -117,7 +117,6 @@ userRoute.post('/resetpassword/:token', async (req, res) => {
         const hashPassword = await bcrypt.hash(password, salt);
          console.log(hashPassword)
          let respo = await User.findByIdAndUpdate({ _id: decoded.existingUser._id },{password:hashPassword});
-         console.log(respo)
         if(respo){
             res.json({ msg: "Password has been updated successfully." });
         }else{
