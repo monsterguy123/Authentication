@@ -26,7 +26,7 @@ const CreatePostController = async(req,res) =>{
 } 
 
 //get all post
-const getPostController = async(req,res)=>{
+const GetPostController = async(req,res)=>{
     try {
         const posts = await Post.find({});
 
@@ -104,7 +104,7 @@ const UnlikeController = async (req,res)=>{
     }
 }
 
-const getLikeController = async(req,res)=>{
+const GetLikeController = async(req,res)=>{
     try {
         const postId = req.params.postId;
         const likes = await Like.findOne({postId});
@@ -115,4 +115,4 @@ const getLikeController = async(req,res)=>{
     }
 }
 
-module.exports = {  CreatePostController , getPostController , UpdatePostcontroller ,DeletePostController,LikeController,UnlikeController,getLikeController};
+module.exports = {  CreatePostController , GetPostController , UpdatePostcontroller ,DeletePostController,LikeController,UnlikeController,GetLikeController};

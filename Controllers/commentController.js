@@ -40,7 +40,7 @@ const DeleteCommentController = async(req,res)=>{
 }
 
 //get all comment of a post
-const getCommentController = async(req,res)=>{
+const GetCommentController = async(req,res)=>{
     try {
         const postId = req.params.postId;
         const Comments = await Comment.find({postId});
@@ -51,4 +51,4 @@ const getCommentController = async(req,res)=>{
     }
 }
 
-module.exports = {CreateCommentController,DeleteCommentController,getCommentController}
+module.exports = {CreateCommentController,DeleteCommentController,GetCommentController}
