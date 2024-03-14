@@ -1,7 +1,4 @@
-
-Great! Based on the information you provided, here's how you can structure and improve your README:
-
-Social Media Backend Application
+                                                                                Social Media Backend Application
 This backend service provides various functionalities for a social media platform, including Authentication, Authorization, Post management (creation, deletion, updating, retrieval), Comment management (creation, deletion, retrieval), and Like functionality.
 
 Features
