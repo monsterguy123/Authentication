@@ -119,5 +119,4 @@ const ResetPasswordController = async (req, res) => {
     }
 }
 
-
 module.exports = {SignupController , SigninController , ForgetPasswordController , ResetPasswordController}

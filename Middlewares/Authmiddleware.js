@@ -3,6 +3,9 @@ const jwt = require('jsonwebtoken')
 const AuthMiddleware = async(req,res,next)=>{
       try {
           const headers = req.header('Authorization');
+          if(!headers){
+            res.json("plz set an authorization token to get the access of the website!!!")
+          }
           const token = headers.split(" ")[1];
 
           const body = jwt.verify(token,process.env.JWTPRIVATEKEY);
